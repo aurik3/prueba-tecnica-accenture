@@ -7,5 +7,5 @@ target/
 .settings/
 *.log
 .DS_Store
-entrevista.txt
-technical_documentation.md
+migrations/
+
