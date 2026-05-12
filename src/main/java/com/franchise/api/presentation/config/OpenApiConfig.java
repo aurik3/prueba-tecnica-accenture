@@ -12,9 +12,8 @@ public class OpenApiConfig {
     public OpenAPI openAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Franchise API")
+                        .title("entrevista tecnica Springboot Fredy Gonzalez")
                         .version("1.0.0")
                         .description("Reactive API for franchises, branches and products"));
     }
 }
-
