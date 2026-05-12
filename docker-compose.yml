@@ -1,0 +1,21 @@
+services:
+  mongo:
+    image: mongo:7.0
+    container_name: franchise-mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: franchise_db
+
+  api:
+    build:
+      context: .
+    container_name: franchise-api
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: local
+      MONGODB_URI: mongodb://mongo:27017/franchise_db
+    depends_on:
+      - mongo
+
